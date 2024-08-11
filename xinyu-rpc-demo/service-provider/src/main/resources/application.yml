@@ -1,0 +1,22 @@
+
+logging:
+  config: classpath:logback-spring.xml
+server:
+  port: 8082
+spring:
+  application:
+    name: rpc-server
+
+rpc:
+  server:
+    #package: xxxx
+    zk:
+      #根节点
+      root: /rpc
+      #Zookeeper服务地址
+      addr: 127.0.0.1:2181
+      #链接超时时间
+      timeout: 10000
+  #Rpc通信端口->Netty端口
+  network:
+      port: 28889
